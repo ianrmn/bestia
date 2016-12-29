@@ -1,0 +1,936 @@
+/*
+Theme Name: bestiafestival
+Theme URI: http://hacemoscodigo.com
+Author: Los Maquiladores
+Author URI: http://hacemoscodigo.com
+Description: Tema de WordPress Personalizado
+Version: 1.0
+*/
+
+@charset 'utf-8';
+
+/*
+YUI 3.4.1 (build 4118)
+Copyright 2011 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+http://yuilibrary.com/license/
+*/
+html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit}input,textarea,select{*font-size:100%}legend{color:#000}
+
+
+/*
+YUI 3.4.1 (build 4118)
+Copyright 2011 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+http://yuilibrary.com/license/
+*/
+body{font:13px/1.231 arial,helvetica,clean,sans-serif;*font-size:small;*font:x-small}select,input,button,textarea{font:99% arial,helvetica,clean,sans-serif}table{font-size:inherit;font:100%}pre,code,kbd,samp,tt{font-family:monospace;*font-size:108%;line-height:100%}
+
+
+/*
+YUI 3.4.1 (build 4118)
+Copyright 2011 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+http://yuilibrary.com/license/
+*/
+h1{font-size:138.5%}h2{font-size:123.1%}h3{font-size:108%}h1,h2,h3{margin:1em 0}h1,h2,h3,h4,h5,h6,strong{font-weight:bold}abbr,acronym{border-bottom:1px dotted #000;cursor:help}em{font-style:italic}blockquote,ul,ol,dl{margin:1em}ol,ul,dl{margin-left:2em}ol{list-style:decimal outside}ul{list-style:disc outside}dl dd{margin-left:1em}th,td{border:1px solid #000;padding:.5em}th{font-weight:bold;text-align:justify}caption{margin-bottom:.5em;text-align:justify}p,fieldset,table,pre{margin-bottom:1em}input[type=text],input[type=password],textarea{width:12.25em;*width:11.9em}
+/*HTML5 element display*/
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section{display:block;}
+/*Figures*/
+figure {margin: 0;}
+
+/* Utilities */
+.lst_reset, .lst_reset li { margin: 0; padding: 0; list-style: none; }
+.clear { clear:both; height:1px; margin:0; padding:0; font-size: 1px; line-height: 0; }
+
+/* clearfix for modern browsers */
+.clearfix:before,
+.clearfix:after { content:""; display:table; }
+.clearfix:after { clear:both; }
+/* For IE 6/7 (trigger hasLayout) */
+.clearfix { zoom:1; }
+
+
+/*** FONT FACE ***/
+
+@font-face {
+	font-family: 'TradeGothic';
+	src: url('fonts/TradeGothicLTStd-BdCn20.eot');
+	src: local('☺'), url('fonts/TradeGothicLTStd-BdCn20.woff') format('woff'), url('fonts/TradeGothicLTStd-BdCn20.ttf') format('truetype'), url('fonts/TradeGothicLTStd-BdCn20.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+/*** GENERAL ***/
+
+body {width:100%; margin:0 auto; font-family: 'helvetica', 'arial'; font-size: 14px; font-weight: lighter; color: #000;}
+.wrapper {width:1005px; margin:0 auto; padding: 30px 11px; position: relative; }
+.content {width: 700px; margin: 100px auto;}
+.content p{line-height: 22px;}
+h2.titulo {font-family: 'TradeGothic', 'helvetica'; font-size: 36px; text-transform: uppercase; text-align: center; font-weight: normal; color:#000; background: url('images/rayatitulo.jpg') no-repeat center bottom; padding-bottom: 40px; margin: 20px 0px}
+h3.subtitulo {font-family: 'Times New Roman'; font-size: 20px; font-weight: bold; text-align: center; color:#000; margin-top: 0px;}
+h4 {font-family: 'TradeGothic', 'helvetica'; font-size: 22px; font-weight: normal; text-align: center;}
+h4.moonchild {color:#9b0000;}
+h5 {font-family: 'Times New Roman'; font-size: 12px; text-align: center; text-transform: uppercase; color: #9b0000; margin-bottom: 20px; background: url('images/rayabottom.jpg') no-repeat center bottom; padding-bottom: 20px;}
+h6 {font-family: 'TradeGothic', 'helvetica'; font-size: 22px; font-weight: normal; margin-bottom: 30px;}
+.calavera {width: 300px; height:220px; margin: 50px auto 0 auto; background: url('images/craneo.gif') no-repeat center bottom; text-align: center;}
+
+/*** HEADER ***/
+
+header {width: 1005px; z-index: 10000; position: relative;}
+#menu {width: 1006px; position: fixed; font-family: 'Times New Roman'; text-transform: uppercase; font-size: 11px; font-weight: bold; background: #fff url('images/bordertop.jpg') no-repeat top center ;padding: 50px 0 30px 20px; top: 0px; opacity: .8;}
+nav {width: 1000px;}
+nav ul {list-style: none; margin: 0px auto; padding: 0px; width: 940px;}
+nav ul li {display: block; float: left; height: 11px; border-right: 1px solid #000; padding-right: 15px; margin-right: 15px;}
+nav ul li a {color: #000; text-decoration: none;}
+
+nav ul li:last-child {border: none; margin: 0px; padding: 0px;}
+
+nav ul li.unactive a, .unactive{text-decoration: line-through; color:#e0e0e0;}
+nav ul li.unactive a:hover {cursor: default;}
+nav ul li .active {color: #9b0000; }
+
+/*** Side Nav ***/
+
+#side-nav {width:26px; position: fixed;  top: 50px; z-index: 100; margin-left: 10px;}
+.second_side-nav {position: absolute!important;}
+#side-nav ul {list-style: none; margin: 0px; padding: 0px;}
+#side-nav ul li {display: block; width: 22px; height: 22px; background: url('images/sociales.png') no-repeat; margin-bottom: 10px;}
+#side-nav ul li a{display: block; width: 22px; height: 22px;}
+#side-nav ul li.vimeo:hover {background-position: -22px 0px;}
+#side-nav ul li.facebook {background-position: 0px -30px;}
+#side-nav ul li.facebook:hover {background-position: -22px -30px;}
+#side-nav ul li.twitter {background-position: 0px -60px;}
+#side-nav ul li.twitter:hover {background-position: -22px -60px;}
+#side-nav ul li.instagram {background-position: 0px -89px;}
+#side-nav ul li.instagram:hover {background-position: -22px -89px;}
+#side-nav ul li.soundcloud {background-position: 0px -119px;}
+#side-nav ul li.soundcloud:hover {background-position: -22px -119px;}
+#side-nav ul li.arca {height:60px; width: 25px; background-position: -8px -140px; margin: -3px 0 0 -3px;}
+
+/*** PORTADA ***/
+
+#portada {padding-top: 0px!important;}
+#portada h1 {display: block; text-indent: -9999px; background: url('images/logo.gif') no-repeat; width: 620px; height: 372px; text-align: center; margin: 20px auto;}
+
+.banner {width:952px; height:90px; background: #e0e0e0; margin-left: -110px; margin-top: 150px;}
+
+
+/*** CONTENIDO ***/
+
+span.link-texto {font-family:'Times New Roman'; text-align: center; width: 100%; display: block;}
+span.link-texto a {color: #000;}
+.contenido-seccion {margin: 40px 0px;}
+.pantalla {padding:100px 0 0 0; text-align:justify}
+
+/*** PROGRAMACIÓN ***/
+
+/*CONCIERTO*/
+
+#concierto { background: url('images/bg-seccion-arriba.png') center top no-repeat; padding-top: 50px;}
+#concierto span.link-texto {margin-top: 50px;}
+#concierto span.fecha-concierto {width: 100%; display: block; text-align: center; font-family: 'Times New Roman'; margin-bottom: 15px;}
+
+.artista img {float: right; display: inline-block; height: 218px; margin: 0 0 10px 30px;}
+.artista {border-top: 1px solid #000; margin-top: 40px; padding-top: 40px;}
+.artista ul.links-artista {list-style: none; padding: 0px; margin: 40px 0 0 0;}
+.artista ul.links-artista li {float: left; margin-right: 20px;}
+.artista ul.links-artista li a {display:block; float: left; margin-right: 10px;}
+.artista ul.links-artista li a.fb-artista {display: block; width: 7px; height: 16px; background: url('images/minifb.png') no-repeat center;}
+.artista ul.links-artista li a {font-family:'Times New Roman';  display: block; color:#000;}
+
+/*** CINE ***/
+
+#ciclo-de-cine {width: 100%; background: url('images/bg-arriba-abajo.png') center top no-repeat; padding-top: 50px;}
+.post-cine {margin-bottom: 25px;}
+.post-cine img {float: left; display: block; height: 217px; width:340px; margin-right: 20px;}
+.post-cine span.horario {font-family: 'Times New Roman'; font-size: 16px;}
+.post-cine h6 {text-transform: uppercase; font-size: 22px; color: #9b0000; margin-bottom: 0px; margin-top: 5px;}
+.post-cine .director {display: block; font-family: 'Times New Roman'; font-size: 16px; color: #9b0000; margin-bottom: 20px;}
+hr.rayita-cine {width: 100px; margin: 0 auto 25px auto; display: block;}
+
+
+/*** VIDEOS ***/
+
+#bestia-sesiones {width: 100%; background: url('images/bg-arriba-abajo.png') center top no-repeat; padding-top: 50px;}
+#bestia-sesiones p {line-height: 22px;}
+.post-video{float: left; width: 341px; text-align: center; margin-right: 18px; margin-bottom: 20px;}
+.post-video h6 {text-transform: uppercase; font-size: 22px; color: #9b0000; margin-bottom: 10px; }
+.hijo2, .hijo4 {margin-right: 0px!important;}
+
+/*** ASISTE ***/
+
+#asiste{font-weight: normal; text-align: center;}
+#mapa {margin: 20px 0; background: url('images/rayabottom.jpg') no-repeat center bottom; padding-bottom: 20px;}
+
+/*** Galeria ***/
+
+#cartel {width: 100%; background: url('images/bg-arriba-abajo.png') center top no-repeat; padding-top: 50px; text-align: center;}
+#fotogaleria {width: 100%; background: url('images/bg-arriba-abajo.png') center top no-repeat; padding-top: 50px;}
+.post-foto{float: left; width: 341px; text-align: center; margin-right: 18px; margin-bottom: 20px; position: relative;}
+.hijo2, .hijo4, .hijo6, .hijo8, .hijo10, .hijo12 {margin-right: 0px!important;}
+.img_descarga {width: 21px; height: 19px; background: url('images/descargar.png') no-repeat; border: none; cursor: pointer;}
+.post-foto .info-post {position: absolute; background: url('images/bg-transp.png') repeat; top: 10%; width: 90%; height: 70%; left: 5%; display: none;}
+.post-foto .info-post h6 {margin-bottom: 10px; margin-top: 15%; font-family: 'Times New Roman'; font-weight: normal;}
+
+/*** Contacto ***/
+
+span.contacto {display: block; width: 100%; text-align: center; font-family: 'TradeGothic'; font-size: 22px; margin-top: 40px; font-weight: bolder;}
+span.contacto a {color: #000; text-decoration: none;}
+
+/*** PATROCINADORES ***/
+
+span.lista-patrocinios {display: block; width: 100%; text-align: center; font-family: 'TradeGothic'; font-size: 22px; margin-top: 40px;}
+.logos {width: 100%;  background: url('images/rayabottom.jpg') no-repeat center bottom; padding-bottom: 20px;}
+#patrocinadores ul {list-style: none; padding: 0px;}
+
+ul.iniciativa {width: 600px; margin: 50px auto;}
+ul.iniciativa li {float:left; margin-right: 50px}
+ul.iniciativa li a {color: #000; text-decoration: none;}
+ul.iniciativa li.ampersand {font-size: 24px; font-family: 'TradeGothic'; padding-top: 30px;}
+ul.iniciativa li.logotexto {padding-top: 30px;}
+
+ul.patrocinios {width: 182px; margin: 50px auto 0 auto;}
+ul.patrocinios li {margin-bottom: 50px; display: block; width: 100%; text-align: center;}
+
+ul.culturales {width: 1058px; margin: 50px auto 0 -170px;}
+ul.culturales li {display: block; float: left; margin-right: 40px; }
+ul.culturales li:last-child {margin: 0px;}
+
+ul.culturales li.conaculta {padding-top: 30px;}
+ul.culturales li.conaculta img {width: 350px;}
+ul.culturales li.anahuac {padding-top: 0px;}
+ul.culturales li.anahuac img {max-width: 80px;}
+ul.culturales li.chopo img {max-width: 200px;}
+
+ul.aliados {width: 668px; margin: 50px auto 0 auto;}
+ul.aliados li {display: block; float: left; margin-right: 90px;}
+ul.aliados li:last-child {margin: 0px;}
+ul.aliados li.conaculta {padding-top: 30px;}
+
+ul.medios {width: 650px; margin: 50px auto 30px auto;}
+ul.medios li {width: 90px; text-align: center; display: block; float: left; margin-right: 50px; height:100px; margin-bottom: 20px; vertical-align:middle}
+ul.medios li:nth-child(5n) {margin-right: 0px;}
+ul.medios li img {max-width: 90px; max-height: 100px;}
+
+
+/*** MERCH ***/
+
+.post-merch{float: left; width: 341px; text-align: center; margin-right: 18px; margin-bottom: 20px;}
+.post-merch h6 {text-transform: uppercase; font-size: 22px; color: #9b0000; margin-bottom: 10px; }
+.hijo2, .hijo4 {margin-right: 0px!important;}
+
+
+/*** BESTIARIO ***/
+
+#bestiario {text-align: center;}
+#bestiario .elbestiario {background: url('images/rayabottom.jpg') no-repeat center bottom; padding-bottom: 20px;}
+#bestiario h6.nombre {margin-bottom: 0px; margin-top: 20px; font-family: 'Helvetica'; font-size: 14px; font-weight: bold;}
+#bestiario span.puesto {font-family: 'Times New Roman'; text-transform: uppercase; font-size: 11px;}
+#bestiario h6.agradecimientos {margin-top: 50px;}
+#bestiario h6.agradecido {margin: 0px; padding: 0px; font-family: 'Helvetica'; font-size: 14px; font-weight: bold;}
+
+/*** NOTICIAS PRENSA ***/
+
+.scrollhor {width: 100%; overflow: scroll;}
+ul.noticias-prensa {list-style: none; width:100%; padding: 0px; margin: 20px 0 0 0;}
+ul.noticias-prensa li {float: left; margin-right: 10px; position: relative;}
+
+ul.noticias-prensa li .info-post {position: absolute; background: url('images/bg-transp.png') repeat; top: 5%; width: 90%; height: 90%; left: 5%; display: none;}
+ul.noticias-prensa li .info-post h6 {margin-bottom: 10px; margin-top: 15%; font-family: 'Times New Roman'; font-weight: normal; text-align: center;}
+ul.noticias-prensa li .info-post .fecha {display: block; width: 100%; text-align: center; margin-bottom: 5px;}
+ul.noticias-prensa li .info-post .fecha a {color: #000;}
+ul.noticias-prensa li .info-post p {text-align: center; padding: 0 5px;}
+
+
+#home_big_content {
+	background-size: initial!important;
+    background-position: top center!important;
+    background-repeat: no-repeat!important;
+    background-color: #000!important;
+}
+.logo_2015 {
+	margin: 0 auto;
+	width: 619px;
+    height: 372px;
+}
+.logo_2015 > img {
+	margin-top: 120px;
+}
+.box_content {
+	width: 700px;
+	margin: 50px auto 50px;
+}
+.box_content .description {
+	text-align: justify;
+	font-family: 'helvetica', 'arial';
+    font-size: 14px;
+    font-weight: lighter;
+    color: #000;
+    line-height: 22px;
+}
+#navigation {
+	margin: 0 auto;
+	width: 957px;
+	display: block;
+}
+#primary_navigation {
+	position: absolute;
+	list-style-type: none;
+    margin-top: 52px;
+    margin-left: 50px;
+}
+#primary_navigation li {
+	float: left;
+	margin-right: 10px;
+}
+#primary_navigation li, #primary_navigation li a:link, #primary_navigation li a:visited {
+	color: #FFF;
+	font-family: 'Times New Roman';
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: bold;
+    text-decoration: none;
+}
+#primary_navigation li a:hover, #primary_navigation li a:active {
+	color: #9A0000!important;
+	text-decoration: none;
+}
+#social_list_one {
+	list-style-type: none;
+    margin: 53px 0 0 0;
+    padding: 0;
+    width: 22px;
+    float: left;
+    position: fixed;
+}
+#social_list_one li {
+	margin-bottom: 16px;
+}
+.facebook_icon, .youtube_icon, .twitter_icon, .instagram_icon, .soundcloud_icon {
+	width: 16px;
+	height: 16px;
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: 16px;
+}
+.facebook_icon:hover, .youtube_icon:hover, .twitter_icon:hover, .instagram_icon:hover, .soundcloud_icon:hover {
+	background-position: bottom center;
+	cursor: pointer;
+}
+.facebook_icon {
+	background-image: url('images/2015/facebook_icon.png');
+}
+.youtube_icon {
+	background-image: url('images/2015/youtube_icon.png');
+}
+.twitter_icon {
+	background-image: url('images/2015/twitter_icon.png');
+}
+.instagram_icon {
+	background-image: url('images/2015/instagram_icon.png');
+}
+.soundcloud_icon {
+	background-image: url('images/2015/soundcloud_icon.png');
+}
+.logo_secuence {
+  width: 619px;
+  height: 372px;
+  margin: 295px auto 0;
+  display: inline-block;
+  /*background: url('images/2015/logo_secuence_1.png') left center;*/
+  background: url('images/2015/logo_secuence_2.png') left center;
+  animation: play 3s steps(29) infinite;
+}
+.logo_secuence_2016 {
+  width: 619px;
+  height: 372px;
+  margin: 295px auto 0;
+  display: inline-block;
+  background: url('images/2016/logo_secuence_03.png') left center;
+  animation: play 3s steps(29) infinite;
+}
+@keyframes play {
+    100% { background-position: -17951px; }
+}
+.logo_2015 span {
+	text-align: center;
+    width: 100%;
+    display: block;
+    text-transform: uppercase;
+    font-family: times;
+    margin-top: 25px;
+}
+#persistent_header {
+	position: relative;
+    display: block;
+    width: 100%;
+    z-index: 99;
+}
+.container_header {
+	width: 980px;
+    margin: 0 auto;
+}
+#menu_second {width: 1006px; position: fixed; font-family: 'Times New Roman'; text-transform: uppercase; font-size: 11px; font-weight: bold; background: #fff url('images/bordertop.jpg') no-repeat top center ;padding: 50px 0 30px 20px; position: relative; opacity: 0.98;}
+#main-nav {
+	font-family: 'Times New Roman';
+	text-transform: uppercase;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-size: bold;
+}
+ul.ediciones {
+	float: left;
+	width: auto;
+	position: absolute!important;
+}
+.ediciones li {
+	float: none!important;
+	display: table!important;
+	border-right: 0px solid transparent!important;
+	margin: 10px 0 0 0!important;
+	padding: 0!important;
+}
+.toogleEdiciones {
+	cursor: pointer;
+}
+.crop_introduccion {
+	height: auto;
+	overflow: hidden;
+}
+.seeMore, .seeLess, #showMore, #showLess, .cineLess, .cineMore {
+	font-family: 'Times New Roman';
+	text-transform: uppercase;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+}
+.aligner {
+	text-align: center;
+	display: block;
+}
+.elbestiario {
+	text-align: center;
+}
+.elbestiario h6.nombre {
+    margin-bottom: 0px;
+    margin-top: 20px;
+    font-family: 'Helvetica';
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 14px;
+}
+.elbestiario span.puesto {
+	font-family: 'Times New Roman';
+    text-transform: uppercase;
+    font-size: 11px
+}
+.elbestiario p {
+	margin-top: 0px;
+}
+p.center {
+	text-align: center;
+}
+img.tm {
+    width: 180px;
+    height: auto;
+}
+.marginBSpacing {
+	margin-bottom: 40px;
+}
+.galeria2015 {
+    z-index: 1;
+    position: relative;
+    display: block;
+}
+.galeria2015 .container {
+	width: 100%;
+	height: 400px;
+	display: block;
+	position: relative;
+	clear: both;
+	/* background: #ccc; */
+	margin-bottom: 30px;
+	overflow: hidden;
+}
+.galeria2015 .thumb_container {
+    height: 90px;
+    margin-top: 20px;
+    display: inline-block;
+    position: relative;
+}
+.thumb_container_gallery {
+	width: 100%;
+	overflow: hidden;
+}
+.galeria2015 .thumb_container .box {
+	width: 135px;
+    height: 90px;
+    display: block;
+    position: relative;
+    float: left;
+    /* background: #ccc; */
+    margin-right: 6px;
+    margin-bottom: 7px;
+}
+#buttons {
+	padding: 0!important;
+    float: none!important;
+    width: 700px!important;
+    display: inline!important;
+    position: absolute!important;
+    padding-top: 130px!important;
+}
+.left_arrow, .right_arrow, #prev, #next {
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	position: relative;
+    margin-top: 60px;
+    cursor: pointer;
+    z-index: 20;
+    background-size: contain!important;
+    opacity: 0.2;
+	transition: 0.2s;
+}
+.left_arrow, #prev {
+	background: url('images/leftarrow.png') no-repeat;
+	float: left;
+	margin-left: -40px;
+}
+.right_arrow, #next {
+	background: url('images/rightarrow.png') no-repeat;
+	float: right!important;
+    margin-right: -40px;
+}
+.left_arrow:hover, .right_arrow:hover, #prev:hover, #next:hover {
+	opacity: 1;
+	transition: 0.2s;
+}
+.galeria2015 .text_container .test_box {
+	width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+	text-align: justify;
+}
+
+/* ------------ galeria 2015 ------------ */
+
+.active_class {
+	opacity: 1!important;
+}
+.bladerunner, .johnzorn, .billlaswell, .davelombardo, .secretchiefs, .abraxas, .klezmerson, .urselli, .ritmia, .dora {
+	cursor: pointer;
+}
+.bladerunner_photo, .johnzorn_photo, .billlaswell_photo, .davelombardo_photo, .secretchiefs_photo, .abraxas_photo, .klezmerson_photo, .urselli_photo, .ritmia_photo, .dora_photo {
+	background-size: contain!important;
+	background-repeat: no-repeat!important;
+}
+.bladerunner_photo {
+	background: url('images/2015/programacion/bladerunner.jpg');
+	width: 100%;
+	height: 100%;
+}
+.bladerunner {
+	background: url('http://bestiafestival.com/wp-content/uploads/2015/11/BLADERUNNER1.jpg') no-repeat !important;
+	background-size: cover!important;
+}
+.johnzorn_photo {
+	/*background: url('images/2015/programacion/zorn.jpg');*/
+	background: url('http://bestiafestival.com/wp-content/uploads/2015/11/zorn_black.jpg');
+	width: 100%;
+	height: 100%;
+}
+.johnzorn {
+	background: url('http://bestiafestival.com/wp-content/uploads/2015/11/zorn_black.jpg') no-repeat !important;
+	/*background: url('http://bestiafestival.com/wp-content/uploads/2015/11/JOHN-ZORN.jpg') no-repeat !important;*/
+	background-size: cover!important;
+}
+.billlaswell_photo {
+	background: url('images/2015/programacion/laswell.jpg');
+	width: 100%;
+	height: 100%;
+}
+.billlaswell {
+	background: url('http://bestiafestival.com/wp-content/uploads/2015/11/LASWELL2.jpg') no-repeat !important;
+	background-size: cover!important;
+}
+.davelombardo_photo {
+	background: url('images/2015/programacion/lombardo.jpg');
+	width: 100%;
+	height: 100%;
+}
+.davelombardo {
+	background: url('http://bestiafestival.com/wp-content/uploads/2015/11/LOMBARDO1.jpg') no-repeat !important;
+	background-size: cover!important;
+}
+.secretchiefs_photo {
+	background: url('images/2015/programacion/chiefs.jpg');
+	width: 100%;
+	height: 100%;
+}
+.secretchiefs {
+	background: url('http://bestiafestival.com/wp-content/uploads/2015/11/chiefs.jpg') no-repeat !important;
+	background-size: cover!important;
+}
+.abraxas_photo {
+	background: url('images/2015/programacion/abraxas.jpg');
+	width: 100%;
+	height: 100%;
+}
+.abraxas {
+	background: url('http://bestiafestival.com/wp-content/uploads/2015/11/ABRAXAS1.jpg') no-repeat !important;
+	background-size: cover!important;
+}
+.klezmerson_photo {
+	background: url('images/2015/programacion/klez.jpg');
+	width: 100%;
+	height: 100%;
+}
+.klezmerson {
+	background: url('http://bestiafestival.com/wp-content/uploads/2015/11/klezermson.jpg') no-repeat !important;
+	background-size: cover!important;
+}
+.urselli_photo {
+	background: url('images/2015/programacion/urselli.jpg');
+	width: 100%;
+	height: 100%;
+}
+.urselli {
+	background: url('http://bestiafestival.com/wp-content/uploads/2015/11/urselli.jpg') no-repeat !important;
+	background-size: cover!important;
+}
+.ritmia_photo {
+	background: url('images/2015/programacion/ritmia.jpg');
+	width: 100%;
+	height: 100%;
+}
+.ritmia {
+	background: url('http://bestiafestival.com/wp-content/uploads/2015/11/ritmia.jpg') no-repeat !important;
+	background-size: cover!important;
+}
+.dora_photo {
+	background: url('images/2015/programacion/dora.jpg');
+	width: 100%;
+	height: 100%;
+}
+.dora {
+	background: url('http://bestiafestival.com/wp-content/uploads/2015/11/dora.jpg') no-repeat !important;
+	background-size: cover!important;
+}
+
+/* ------------ galeria 2016 ------------ */
+
+.john_medeski, .lee_ranaldo, .kenny_g, .mike_rivard, .godflesh, .simulacrum, .cleric, .bonequi, .bartilotti, .vigueras, .cruz {
+	cursor: pointer;
+}
+.john_medeski_photo, .lee_ranaldo_photo, .kenny_g_photo, .mike_rivard_photo, .godflesh_photo, .simulacrum_photo, .cleric_photo, .bonequi_photo, .bartilotti_photo, .vigueras_photo, .cruz_photo {
+	background-size: cover!important;
+	background-repeat: no-repeat!important;
+}
+.john_medeski_photo {
+	background: url('http://bestiafestival.com/wp-content/uploads/2016/10/medeski.jpg');
+	width: 100%;
+	height: 100%;
+}
+.john_medeski {
+	background: url('http://bestiafestival.com/wp-content/uploads/2016/10/medeski.jpg') no-repeat !important;
+	background-size: cover!important;
+}
+.lee_ranaldo_photo {
+	background: url('http://bestiafestival.com/wp-content/uploads/2016/11/ranaldo.jpg');
+	width: 100%;
+	height: 100%;
+}
+.lee_ranaldo {
+	background: url('http://bestiafestival.com/wp-content/uploads/2016/11/ranaldo.jpg') no-repeat !important;
+	background-size: cover!important;
+}
+.kenny_g_photo {
+	background: url('http://bestiafestival.com/wp-content/uploads/2016/10/kenny.jpg');
+	width: 100%;
+	height: 100%;
+}
+.kenny_g {
+	background: url('http://bestiafestival.com/wp-content/uploads/2016/10/kenny.jpg') no-repeat !important;
+	background-size: cover!important;
+}
+.mike_rivard_photo {
+	background: url('http://bestiafestival.com/wp-content/uploads/2016/10/rivard.jpg');
+	width: 100%;
+	height: 100%;
+}
+.mike_rivard {
+	background: url('http://bestiafestival.com/wp-content/uploads/2016/10/rivard.jpg') no-repeat !important;
+	background-size: cover!important;
+}
+.godflesh_photo {
+	background: url('http://bestiafestival.com/wp-content/uploads/2016/11/godflesh.jpg');
+	width: 100%;
+	height: 100%;
+}
+.godflesh {
+	background: url('http://bestiafestival.com/wp-content/uploads/2016/11/godflesh.jpg') no-repeat !important;
+	background-size: cover!important;
+}
+.simulacrum_photo {
+	background: url('http://bestiafestival.com/wp-content/uploads/2016/10/simulacrum.jpg');
+	width: 100%;
+	height: 100%;
+}
+.simulacrum {
+	background: url('http://bestiafestival.com/wp-content/uploads/2016/10/simulacrum.jpg') no-repeat !important;
+	background-size: cover!important;
+}
+.cleric_photo {
+	background: url('http://bestiafestival.com/wp-content/uploads/2016/10/cleric.jpg');
+	width: 100%;
+	height: 100%;
+}
+.cleric {
+	background: url('http://bestiafestival.com/wp-content/uploads/2016/10/cleric.jpg') no-repeat !important;
+	background-size: cover!important;
+}
+
+.bonequi_photo {
+	background: url('http://bestiafestival.com/wp-content/uploads/2016/11/bonequi.jpg') no-repeat !important;
+	width: 100%;
+	height: 100%;
+}
+.bonequi {
+	background: url('http://bestiafestival.com/wp-content/uploads/2016/11/bonequi.jpg') no-repeat !important;
+	background-size: cover!important;
+}
+.bartilotti_photo {
+	background: url('http://bestiafestival.com/wp-content/uploads/2016/11/bartilotti.jpg') no-repeat !important;
+	width: 100%;
+	height: 100%;
+}
+.bartilotti {
+	background: url('http://bestiafestival.com/wp-content/uploads/2016/11/bartilotti.jpg') no-repeat !important;
+	background-size: cover!important;
+}
+.vigueras_photo {
+	background: url('http://bestiafestival.com/wp-content/uploads/2016/11/vigueras.jpg') no-repeat !important;
+	width: 100%;
+	height: 100%;
+}
+.vigueras {
+	background: url('http://bestiafestival.com/wp-content/uploads/2016/11/vigueras.jpg') no-repeat !important;
+	background-size: cover!important;
+}
+.cruz_photo {
+	background: url('http://bestiafestival.com/wp-content/uploads/2016/11/cruz.jpg') no-repeat !important;
+	width: 100%;
+	height: 100%;
+}
+.cruz {
+	background: url('http://bestiafestival.com/wp-content/uploads/2016/11/cruz.jpg') no-repeat !important;
+	background-size: cover!important;
+}
+
+.bx-wrapper .bx-viewport {
+	-moz-box-shadow: 0 0 0px #fff;
+    -webkit-box-shadow: 0 0 0px #fff;
+    box-shadow: 0 0 0px #fff;
+    /* border: 5px solid #fff; */
+    left: -5px;
+    /* background: #fff; */
+}
+.bx-wrapper .bx-pager {
+	bottom: -50px!important;
+}
+.gallery_nav {
+	margin-top: 240px;
+	position: absolute;
+	display: inline;
+	width: 700px;
+	z-index: 12;
+	vertical-align: middle;
+}
+.bx-viewport {
+	overflow: visible!important;
+	height: 400px;
+}
+.gallery_slider {
+	margin: 0;
+}
+.bx-wrapper .bx-caption {
+	clear: both!important;
+    display: block!important;
+    position: relative!important;
+    margin-top: 5px!important;
+    background: transparent!important;
+    color: #000!important;
+}
+.bx-wrapper .bx-caption span {
+	color: #000!important;
+	font-family: Times;
+	display: block;
+	font-size: 14px;
+	padding: 10px;
+	text-align: center;
+	font-weight: bold;
+}
+.bx-prev {
+	background: url('images/leftarrow.png') no-repeat!important;
+	margin-left: -50px;
+    background-size: cover!important;
+}
+.bx-next {
+	background: url('images/rightarrow.png') no-repeat!important;
+	background-size: cover!important;
+	right: -40px!important;
+}
+#huge_it_slideshow_left_1, #huge_it_slideshow_right_1 {
+	display: none!important;
+}
+
+
+.gall_artist {
+	width: 700px;
+    height: auto;
+    overflow-x: hidden;
+ }
+.gall_artist ul {
+	margin: 0;
+	padding: 0;
+}
+.gall_artist ul li {
+	width: 700px;
+	float: left;
+	list-style-type: none;
+}
+.gall_artist ul li .arsitBox {
+	width: 700px;
+	height: 400px;
+}
+.arrowLeft, .arrowRight {
+	width: 80px;
+	height: 40px;
+	background: #ccc;
+	cursor: pointer;
+	display: block;
+}
+.arrowRight {
+	background: #000!important;
+}
+
+
+
+#carousel {
+	width:700px;
+	height:auto;	
+	margin:0 auto;
+}
+
+#slides {
+	overflow:hidden;
+	/* fix ie overflow issue */
+	position:relative;
+	width:700px;
+	height:auto;
+}
+
+/* remove the list styles, width : item width * total items */	
+#slides ul {
+	position:relative;
+	left:0;
+	top:0;
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+
+/* width of the item, in this case I put 250x250x gif */
+#slides li {
+	width:700px;
+	height:auto;	
+	float:left;
+}
+
+#slides li img {
+	padding:5px;
+}
+.arsitBox {
+	width: 700px;
+	height: 400px;
+}
+
+/* Styling for prev and next buttons */
+#buttons {
+	padding:0 0 5px 0;	
+	float:right;
+}
+
+#buttons a {
+	display:block; 
+	width:31px; 
+	height:32px;
+	text-indent:-999em;
+	float:left;
+	outline:0;
+}
+.clear {clear:both}
+
+.patro_aliados, .inst_cult {
+    margin-top: 70px;
+    width: 610px;
+    margin-right: 12px;
+ }
+.patro_aliados li, .inst_cult li {
+	float: left;
+	list-style-type: none;
+	margin-right: 40px;
+}
+#programacion_box {
+	position: relative;
+    display: inline-block;
+    height: auto;
+}
+.programacion_left, .programacion_right {
+	text-transform: uppercase;
+	width: 350px;
+	display: inline-block;
+	position: relative;
+	font-family: 'TradeGothic', 'helvetica';
+}
+.programacion_left {
+	float: left;
+}
+.programacion_right {
+	float: right;
+}
+.programacion_left h3, .programacion_right h3, .programacion_left h4, .programacion_right h4 {
+	text-align: left;
+	font-family: 'TradeGothic', 'helvetica';
+}
+.programacion_left h3, .programacion_right h3 {
+	font-size: 20px;
+}
+.programacion_left h4, .programacion_right h4 {
+	font-size: 17px;
+}
+.programacion_left h4.lower, .programacion_right h4.lower {
+	font-size: 14px;
+    line-height: 16px;
+    margin-top: 18px;
+    color: #323232;
+}
+.programacion_left h4 p span, .programacion_right h4 p span, .programacion_left h4.lower p span, .programacion_right h4.lower p span {
+	font-size: 12px;
+}
+#huge_it_slideshow_left_2 {
+	left: -50px!important;
+	display: inline!important;
+}
+#huge_it_slideshow_right_2 {
+	right: -50px!important;
+	display: inline!important;
+}
+.bx-viewport { min-height: 520px!important; }
+.bx-wrapper { margin-bottom: 150px!important; }
+.cine_small { display: inline-block; }

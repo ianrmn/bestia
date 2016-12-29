@@ -1,0 +1,8 @@
+<h6 class="agradecimientos">Agradecimientos</h6>
+						<?php $args = array('post_type' => 'agradecimientos', 'numberposts' => -1);
+						$agradecimientos = get_posts($args);
+						foreach ($agradecimientos as $agradecido ) {
+
+						?>
+						<h6 class="agradecido"><?php echo $agradecido->post_title; ?></h6>
+						<?php } wp_reset_query(); ?>
